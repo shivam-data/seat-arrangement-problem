@@ -48,6 +48,10 @@ document.querySelector('#seat-form-text').addEventListener('submit',(e)=>{
     e.preventDefault()
     var rows = document.getElementById('text-input-row').value
     var blockedSeats = document.getElementById('text-blockedinput-row').value.split(',')
+
+    blockedSeats.forEach(item=>{
+        item = item.toLowerCase()
+    })
     const seats = ['a','b','c','d','e','f','g','h','i','j']
 
     const blockedSeatjson = {}
